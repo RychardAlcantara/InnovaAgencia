@@ -28,5 +28,5 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         branch: gh-pages
-        folder: dist/innova-agencia  # substitua se o nome da pasta for diferente
+        folder: dist/innova-agencia/browser # substitua se o nome da pasta for diferente
         token: ${{ secrets.GH_TOKEN }}
