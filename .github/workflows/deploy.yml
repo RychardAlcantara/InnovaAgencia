@@ -29,4 +29,4 @@ jobs:
       with:
         branch: gh-pages
         folder: dist/innova-agencia  # substitua se o nome da pasta for diferente
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.GH_TOKEN }}
