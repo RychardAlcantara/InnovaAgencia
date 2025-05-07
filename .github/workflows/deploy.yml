@@ -27,5 +27,6 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        branch: gh-pages  # branch de destino
-        folder: dist/innova-agencia  # <-- Substitua aqui com o nome exato
+        branch: gh-pages
+        folder: dist/innova-agencia  # substitua se o nome da pasta for diferente
+        token: ${{ secrets.GITHUB_TOKEN }}
