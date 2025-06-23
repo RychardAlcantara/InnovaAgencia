@@ -1,13 +1,16 @@
+<app-header></app-header>
+<app-hero></app-hero>
+<app-sobre></app-sobre>
+<app-servicos></app-servicos>
+<app-feedbacks></app-feedbacks>
+<app-formulario></app-formulario>
+<app-contato></app-contato>
+<app-footer></app-footer>
 <!-- Botão para subir ao topo -->
 <button
+  *ngIf="showScrollTop"
   class="fixed bottom-4 right-4 bg-[#003d31] text-white p-6 rounded-full shadow-lg hover:bg-[#035646] transition-colors"
   (click)="scrollToTop()"
   aria-label="Voltar ao topo">
   ↑
 </button>
-<app-header></app-header>
-<app-hero></app-hero>
-<app-sobre></app-sobre>
-<app-servicos></app-servicos>
-<app-contato></app-contato>
-<app-footer></app-footer>

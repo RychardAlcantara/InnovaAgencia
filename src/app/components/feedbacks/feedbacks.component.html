@@ -1,0 +1,42 @@
+<section id="sobre" class="py-20 px-6 bg-[#f9f9f9] text-center">
+  <h2 class="text-3xl font-bold text-[#003d31] mb-12">
+    Veja o que estão falando sobre a gente!
+  </h2>
+
+  <div class="flex items-center justify-center gap-4 flex-wrap">
+
+    <!-- Feedbacks -->
+    <div class="flex items-center gap-6 flex-wrap justify-center">
+      <!-- Feedback anterior (esquerda) -->
+      <div *ngIf="feedbackAnterior"
+        class="w-64 sm:w-72 bg-white rounded-xl shadow p-5 opacity-80 scale-95 transform transition">
+        <img [src]="feedbackAnterior.foto" [alt]="feedbackAnterior.nome"
+          class="w-16 h-16 rounded-full mx-auto mb-3 object-cover" />
+        <p class="text-sm italic line-clamp-3">"{{ feedbackAnterior.mensagem }}"</p>
+        <p class="text-sm text-gray-600 mt-2 font-semibold">{{ feedbackAnterior.nome }}</p>
+        <p class="text-xs text-gray-400">{{ feedbackAnterior.cargo }}</p>
+      </div>
+
+      <!-- Feedback atual (centralizado) -->
+      <div *ngIf="feedbackAtual"
+        class="w-80 sm:w-[26rem] bg-white rounded-2xl shadow-xl p-8 scale-100 transform transition fade-feedback"
+        [class.show]="show">
+        <img [src]="feedbackAtual.foto" [alt]="feedbackAtual.nome"
+          class="w-20 h-20 rounded-full mx-auto mb-4 object-cover" />
+        <p class="text-lg italic mb-4 leading-relaxed">"{{ feedbackAtual.mensagem }}"</p>
+        <h4 class="text-[#003d31] font-semibold text-base">{{ feedbackAtual.nome }}</h4>
+        <span class="text-sm text-gray-500">{{ feedbackAtual.cargo }}</span>
+      </div>
+
+      <!-- Feedback próximo (direita) -->
+      <div *ngIf="feedbackProximo"
+        class="w-64 sm:w-72 bg-white rounded-xl shadow p-5 opacity-80 scale-95 transform transition">
+        <img [src]="feedbackProximo.foto" [alt]="feedbackProximo.nome"
+          class="w-16 h-16 rounded-full mx-auto mb-3 object-cover" />
+        <p class="text-sm italic line-clamp-3">"{{ feedbackProximo.mensagem }}"</p>
+        <p class="text-sm text-gray-600 mt-2 font-semibold">{{ feedbackProximo.nome }}</p>
+        <p class="text-xs text-gray-400">{{ feedbackProximo.cargo }}</p>
+      </div>
+    </div>
+  </div>
+</section>
